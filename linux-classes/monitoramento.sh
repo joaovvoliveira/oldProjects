@@ -1,6 +1,9 @@
 #!/bin/bash
 
 LOG_DIR="../../myapp/logs"
+FILE_DIR="../../myapp/logs-processados"
+
+mkdir -p $FILE_DIR
 
 echo "verificando $LOG_DIR"
 
@@ -16,5 +19,24 @@ find $LOG_DIR -name "*.log" -print0 | while IFS= read -r -d '' file; do
 
 
         sort "${file}.filtrado" -o "${file}.filtrado"
-        uniq "${file}.filtrado" > "${file}.clean"    
+        uniq "${file}.filtrado" > "${file}.clean"
+
+
+        num_words=$(wc -w < "${file}.clean")
+        num_lines=$(wc -l < "${file}.clean")
+
+        file_name=$(basename "${file}.clean")
+
+        echo "File: $file_name" >> "${FILE_DIR}/log_stats_$(date +%F).txt"
+        echo "Lines: $num_lines" >> "${FILE_DIR}/log_stats_$(date +%F).txt"
+        echo "Words: $num_words" >> "${FILE_DIR}/log_stats_$(date +%F).txt"
+
+        echo "---------------------" >> "${FILE_DIR}/log_stats_$(date +%F).txt"
+
+        cat ${file}.clean >> "${FILE_DIR}/logs_$(date +%F).log"
+
+
+
+
+
 done

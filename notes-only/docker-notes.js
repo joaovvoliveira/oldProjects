@@ -22,8 +22,8 @@ A Docker image is a tool that includes everything necessary for our application.
 sudo service postgresql status -> Checks the PostgreSQL service status.
 
 sudo service postgresql start -> Starts the PostgreSQL service.
-
-sudo -u postgres psql -> Accesses the PostgreSQL database as the postgres user.
+ß
+sudo -u postgres psql -> Accesses the PostgreSQL database as the postgres user
 
 CREATE DATABASE db_adopet; -> Creates the database.
 
