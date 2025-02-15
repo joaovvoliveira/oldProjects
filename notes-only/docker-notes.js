@@ -1,35 +1,34 @@
-FROM node:20 ->     Isso diz a versao do node que usara
-WORKDIR /app ->     Definir o diretorio onde iremos trabalhar / Padronizando o ambiente que o time esta trabalhando
-COPY package* . ->  Fazer um COPY de todas as configuracoes do sistema (package.json/package-lock.json) / O . diz que sera dentro do WORKDIR definido
-RUN npm install ->  Comando de criara a imagem Docker
-COPY . . ->         Copia todo o projeto para dentro do Container
-ENTRYPOINT npm start -> Comando que ira criar o Container com todos os dados copiados anteriormente
+FROM node:20 -> This specifies the version of Node.js to be used.
+WORKDIR /app -> Defines the working directory, standardizing the environment the team is working in.
+COPY package* . -> Copies all system configuration files (package.json/package-lock.json). The . indicates that the files will be copied into the defined WORKDIR.
+RUN npm install -> Command that will create the Docker image.
+COPY . . -> Copies the entire project into the container.
+ENTRYPOINT npm start -> Command that will create the container with all previously copied data.
 
-npm install -> Atualiza dependencias
+npm install -> Updates dependencies.
 
-Comando para criar a imagem:
-docker build -t adopet-front:1.0 . -> -t permite criar uma tag(nome) para ela, junto com a versao / o ponto na final busca pelo arquivo DOCKERFILE na pasta que estamos 
+Command to create the image:
+docker build -t adopet-front:1.0 . -> -t allows tagging (naming) the image, including the version. The . at the end searches for the Dockerfile in the current folder.
 
-docker images -> Consulta imagens
-docker run -d -p 80:3000 adopet-front:1.0 -> Sobe um container com a imagem. -d para subir em background, -p para definir a porta 80:3000. 80-meu computador/3000-porta docker
+docker images -> Lists images.
+docker run -d -p 80:3000 adopet-front:1.0 -> Runs a container with the image. -d runs it in the background, -p maps port 80 (host) to 3000 (Docker).
 
-docker ps -a -> para ver os containers em execucao
+docker ps -a -> Lists all running containers.
 
 https://www.alura.com.br/artigos/desvendando-o-dockerfile
 
-A imagem docker e uma ferramente que inclui tudo que e necessario para a nossa aplicacao.
+A Docker image is a tool that includes everything necessary for our application.
 
-sudo service postgresql status
+sudo service postgresql status -> Checks the PostgreSQL service status.
 
-sudo service postgresql start
+sudo service postgresql start -> Starts the PostgreSQL service.
 
-sudo -u postgres psql
+sudo -u postgres psql -> Accesses the PostgreSQL database as the postgres user.
 
-CREATE DATABASE db_adopet; -> Cria o banco de dados.
+CREATE DATABASE db_adopet; -> Creates the database.
 
-\q sai do banco
+\q -> Exits the database.
 
-npm run typeorm migration:run
+npm run typeorm migration:run -> Runs TypeORM migrations.
 
-npm start -> Ira abrir na porta 3000/adotante
-
+npm start -> Opens the application at port 3000/adotante.

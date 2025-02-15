@@ -1,124 +1,105 @@
-1. Inicializar um repositório Git no projeto
+1.	Initialize a Git repository in the project
 
 git init
-Descrição: Cria um repositório Git na pasta atual. Esse comando é o ponto de partida para começar a versionar um projeto.
+Description: Creates a Git repository in the current folder. This command is the starting point for versioning a project.
+	2.	Configure your username and email
 
-2. Configurar seu nome de usuário e e-mail
-
-git config --global user.name "João Victor"
-git config --global user.email "jvictor_oliveira@outlook.com.br"
-Descrição: Configura suas credenciais para identificar quem está fazendo as alterações.
-
-3. Adicionar arquivos ao controle de versão
+git config –global user.name “João Victor”
+git config –global user.email “jvictor_oliveira@outlook.com.br”
+Description: Sets your credentials to identify who is making the changes.
+	3.	Add files to version control
 
 git add .
-Descrição: Adiciona todos os arquivos do projeto ao índice (staging area) para serem versionados. Use git add nome_do_arquivo para adicionar apenas um arquivo específico.
+Description: Adds all project files to the index (staging area) to be versioned. Use git add file_name to add only a specific file.
+	4.	Create a checkpoint (commit)
 
-4. Criar um ponto de controle (commit)
-
-git commit -m "Mensagem descritiva do commit"
-Descrição: Salva as alterações no histórico do repositório. A mensagem deve descrever claramente o que foi alterado.
-
-5. Verificar o status do repositório
+git commit -m “Descriptive commit message”
+Description: Saves changes to the repository history. The message should clearly describe what was changed.
+	5.	Check the repository status
 
 git status
-Descrição: Mostra informações sobre os arquivos alterados, não rastreados ou preparados para commit.
+Description: Displays information about modified, untracked, or staged files.
+	6.	Link the local repository to GitHub
 
-6. Associar o repositório local ao GitHub
-
-git remote add origin https://github.com/seu-usuario/nome-repositorio.git
-Descrição: Conecta seu repositório local ao repositório remoto no GitHub.
-
-7. Enviar os commits para o GitHub
+git remote add origin https://github.com/your-username/repository-name.git
+Description: Connects your local repository to the remote repository on GitHub.
+	7.	Push commits to GitHub
 
 git push -u origin main
-Descrição: Envia os commits para o branch principal (main) no GitHub. A primeira vez que usar, o -u conecta o branch local ao remoto.
+Description: Sends commits to the main branch (main) on GitHub. The first time you use it, -u links the local branch to the remote one.
+	8.	Clone an existing GitHub repository
 
-8. Clonar um repositório existente do GitHub
-
-git clone https://github.com/seu-usuario/nome-repositorio.git
-Descrição: Baixa um repositório remoto para sua máquina local.
-
-9. Ver o histórico de commits
+git clone https://github.com/your-username/repository-name.git
+Description: Downloads a remote repository to your local machine.
+	9.	View commit history
 
 git log
-Descrição: Mostra uma lista com o histórico de commits, incluindo o autor, a data e a mensagem.
-
-10. Atualizar o repositório local com alterações do remoto
+Description: Shows a list of commit history, including the author, date, and message.
+	10.	Update the local repository with remote changes
 
 git pull
-Descrição: Baixa e aplica alterações do repositório remoto para o repositório local.
+Description: Fetches and applies changes from the remote repository to the local repository.
+	11.	Remove a file from version control (without deleting it locally)
 
-11. Remover um arquivo do controle de versão (sem deletar o arquivo local)
-
-git rm --cached nome_do_arquivo
-Descrição: Remove o arquivo do controle de versão, mas o mantém na sua pasta local.
-
-12. Visualizar diferenças entre alterações
+git rm –cached file_name
+Description: Removes the file from version control but keeps it in your local folder.
+	12.	View differences between changes
 
 git diff
-Descrição: Exibe as diferenças entre os arquivos alterados e a versão mais recente do commit.
-
-13. Ver branches existentes
+Description: Displays differences between modified files and the latest committed version.
+	13.	List existing branches
 
 git branch
-Descrição: Lista todos os branches (ramos) no repositório. O branch atual é destacado com um asterisco *.
+Description: Lists all branches in the repository. The current branch is highlighted with an asterisk *.
+	14.	Create a new branch
 
-14. Criar um novo branch
+git branch branch-name
+Description: Creates a new branch to work on isolated changes.
+	15.	Switch to another branch
 
-git branch nome-do-branch
-Descrição: Cria um novo branch para trabalhar em alterações isoladas.
+git checkout branch-name
+Description: Switches to the specified branch.
+	16.	Merge a branch into the current branch
 
-15. Alternar para outro branch
+git merge branch-name
+Description: Combines changes from another branch into the current branch.
+	17.	Revert local changes
 
-git checkout nome-do-branch
-Descrição: Alterna para o branch especificado.
+git checkout – file_name
+Description: Discards local changes to a file, restoring it to the last committed state.
+	18.	Delete a branch
 
-16. Fundir um branch ao branch atual
+git branch -d branch-name
+Description: Deletes a branch that has already been merged into the main branch.
+	19.	Delete a file and mark the deletion for the next commit
 
-git merge nome-do-branch
-Descrição: Combina as alterações de outro branch ao branch atual.
+git rm file_name
+Description: Removes a file from the directory and marks it for deletion in the next commit.
+	20.	Reset the repository to a previous commit
 
-17. Reverter alterações locais
+git reset –hard commit-ID
+Description: Resets the repository to the state of a specific commit. Warning: this can cause loss of changes!
 
-git checkout -- nome_do_arquivo
-Descrição: Desfaz as alterações feitas em um arquivo local, retornando ao último estado commitado.
+—————— Alura Alura
 
-18. Apagar um branch
+git init -> Initializes an empty repository on your computer.
 
-git branch -d nome-do-branch
-Descrição: Apaga um branch que já foi fundido no branch principal.
+git branch -M main -> Creates a branch for the repository.
 
-19. Excluir um arquivo e marcar a exclusão para o próximo commit
+git remote add NAME URL_ORIGIN -> Connects your repository to the GitHub repository.
 
-git rm nome_do_arquivo
-Descrição: Remove um arquivo do diretório e marca sua exclusão para ser commitada.
+git status -> Checks changes that haven’t been committed.
 
-20. Redefinir o repositório para um commit anterior
+git add . -> . selects all files in the folder.
 
-git reset --hard ID_do_commit
-Descrição: Redefine o repositório para o estado de um commit específico. Cuidado: pode causar perda de alterações!
+git commit -m “TEXT”
 
------------------- Alura Alura
+git push origin main -> Pushes the file to GitHub.
 
-git init -> Inicia repositorio vazio no seu computador
+git pull origin main -> Pulls the updated file from GitHub to your machine.
 
-git branch -M main -> Cria uma branch para o repositorio
+git checkout BRANCH -> Switches between branches.
 
-git remote add NOME URL_ORIGIN -> Conecta seu repositorio com o repositorio do github
+git tag -a v1.0 -m “Version 1.0” -> Creates a tag for the current version.
 
-git statuS -> Verifica as alteracoes que nao foram commitadas
-
-git add . -> . seleciona todos os arquivos da pasta
-
-git commit -M "TEXTO"
-
-git push origin main -> Envia o arquivo para o GITHUB
-
-git pull origin main -> Tras o arquivo alterado do Github para sua maquina
-
-git checkout BRANCH -> faz a troca das branchs que voce esta
-
-git tag -a v1.0 -m "Versao 1.0" -> Cria uma tag para a versao atual
-
-git push origin v1.0 -> Envia para o github
+git push origin v1.0 -> Pushes the tag to GitHub.

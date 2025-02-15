@@ -1,19 +1,12 @@
 GitFlow
-Modelo de branches: usa um modelo de ramificações mais complexo, com branches específicas para features, releases, hotfixes, etc.
-
-Gerenciamento de versão: facilita o gerenciamento de versões e releases, pois existem branches dedicadas para essas finalidades.
-
-Isolamento de recursos: permite o isolamento de recursos em desenvolvimento, o que pode ser útil para projetos grandes ou com múltiplas equipes.
-
-Ciclo de vida claro: oferece um ciclo de vida claro para features, com branches dedicadas.
-
-Estabilidade em Releases: fornece maior estabilidade nas versões de release, pois o desenvolvimento é mesclado em branches específicas para esse fim.
+	•	Branching Model: Uses a more complex branching model with specific branches for features, releases, hotfixes, etc.
+	•	Version Management: Facilitates version and release management with dedicated branches for these purposes.
+	•	Feature Isolation: Allows for isolating features in development, which is useful for large projects or teams.
+	•	Clear Lifecycle: Provides a clear lifecycle for features with dedicated branches.
+	•	Release Stability: Ensures greater stability in releases since development is merged into specific branches for that purpose.
 
 Trunk Based
-Branches Simplificadas: usa um modelo de ramificação mais simples, geralmente com apenas uma branch principal.
-
-Entregas Contínuas: favorece a entrega contínua, pois as modificações são integradas diretamente na branch principal.
-
-Menos sobrecarga: reduz a sobrecarga associada à criação e manutenção de múltiplas branches.
-
-Retroalimentação rápida: proporciona feedback rápido, pois as mudanças são integradas mais frequentemente.
+	•	Simplified Branching: Uses a simpler branching model, usually with only a main branch.
+	•	Continuous Delivery: Promotes continuous delivery as changes are integrated directly into the main branch.
+	•	Less Overhead: Reduces the overhead of creating and maintaining multiple branches.
+	•	Fast Feedback: Provides quick feedback as changes are integrated more frequently.

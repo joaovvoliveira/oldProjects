@@ -46,14 +46,30 @@ sudo usermod -aG group_name user_name => Add user to the group
 
 getent group devs => show groups and users
 
+searchingOnLinux:
 
+find . -name "*.log" => bring all the files ending in .log
 
+find $LOG_DIR -name "*.log" -print0 | while IFS= read -r -d '' arquivo; do
+        echo "arquivo $arquivo"
+done
 
+IFS= => (Internal Field Separator) Defined as empty
+read -r=> read for reading each file -r understand only letter 
+-d '' delimiter null and -print0 => has to be use together
+arquivo is the variable defined for each item
 
+sed -i 's/User password is .*/User password is REDACTED/g' "${arquivo}.filtrado"
+sed -i 's/API key leaked: .*/API key leaked: REDACTED/g' "${arquivo}.filtrado"
 
+sed -i swap the first text for the second one in the file $arquivo.filtrado
 
+-i swap for al
 
-
-
-
-
+-r: sort in reverse (descending) order.
+-n: use numeric sort instead of alphabetical sort, useful for sorting numbers.
+-k: specify a column to sort by (e.g. -k 2 sort by the second column).
+-u: remove duplicate lines from the output, leaving only one instance of each.
+-t: set a field delimiter, useful for files with columns separated by commas or other characters (e.g. -t ,).
+-o: save the sorted output to a specified file, useful for overwriting the original file without having to use redirection.
+-f: treat uppercase and lowercase letters equally, useful when you need to ignore the distinction between them for a purely alphabetical sort.
