@@ -32,11 +32,17 @@ function monitor_memory(){
         echo "uso do main dir: " >> $LOG_DIR/log_rede.txt
         du -sh /home/ubuntu | awk '{print $1}' >> $LOG_DIR/log_rede.txt
 
+
 }
 
 function monitor_hardware(){
         echo "$(date)" >> $LOG_DIR/log_hardware.txt
-        free -h | grep Mem | awk '{print "Total: "$2,"Usada: " $3, "Livre: " $4}' >> $LOG_DIR/log_hardware.txt
+        free -h | grep Mem | awk '{print "RAM Memory Total: "$2,"Usada: " $3, "Livre: " $4}' >> $LOG_DIR/log_hardware.txt
+
+        top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print "Uso da CPU: " 100 - $1 "%"}' >> $LOG_DIR/log_hardware.txt
+
+        echo "Read and Write operations:" >> $LOG_DIR/log_hardware.txt
+        iostat | grep -E "Device|^sda|^sdb|^sdc" | awk '{print $1, $2, $3, $4}' >> $LOG_DIR/log_hardware.txt
 }
 
 function monitor_logs_connection(){
@@ -45,5 +51,3 @@ function monitor_logs_connection(){
         monitor_memory
         monitor_hardware
 }
-
-monitor_logs_connection
