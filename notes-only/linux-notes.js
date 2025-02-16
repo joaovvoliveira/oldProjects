@@ -73,3 +73,10 @@ sed -i swap the first text for the second one in the file $arquivo.filtrado
 -t: set a field delimiter, useful for files with columns separated by commas or other characters (e.g. -t ,).
 -o: save the sorted output to a specified file, useful for overwriting the original file without having to use redirection.
 -f: treat uppercase and lowercase letters equally, useful when you need to ignore the distinction between them for a purely alphabetical sort.
+
+REGEX:
+ubuntu@planetary-nutcracker:~$ grep -E "fail(ed)?|error|denied|unauthorized" /var/log/syslog
+
+()? makes it look even for fail or failed
+
+awk '{print $1,$2,$3,$5,$6,$7}' => it brings Collums 1,2,3...
