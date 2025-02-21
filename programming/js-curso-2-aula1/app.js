@@ -1,119 +1,66 @@
-// let titulo = document.querySelector('h1');
-// titulo.innerHTML = 'ABC';
+let drawnNumbersList = [];
+let limitNumber = 10;
+let secretNumber = generateRandomNumber();
+let attempts = 1;
 
-// let subtitulo = document.querySelector('p');
-// subtitulo.innerHTML = 'aaa'
-
-// let secretNumber = getRandomNumber();
-
-// function inserirTexto(tag,valor){
-//   let texto = document.querySelector(tag);
-//   texto.innerHTML = valor;
-// };
-
-// inserirTexto('h1','TESTE3');
-// inserirTexto('p', 'TESTE2');
-
-// function getRandomNumber() {
-//   return parseInt(Math.random() * 10 +1);
-// };
-
-// function verificarChute(){
-//   let chute = document.querySelector('input').value;
-//   console.log(chute == secretNumber);
-
-//   getRandomNumber();
-//   console.log(secretNumber);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function insertText(tag,value){
-  let text = document.querySelector(tag)
-  text.innerHTML = value
+function displayTextOnScreen(tag, text) {
+    let field = document.querySelector(tag);
+    field.innerHTML = text;
+    responsiveVoice.speak(text, 'Brazilian Portuguese Female', {rate:1.2});
 }
 
-insertText('h1','Guessing game')
-insertText('p','Choose between 1 and 10')
-
-function getRandomNumber(min,max){
-  return parseInt(Math.random() * (max - min) + 1);
+function displayInitialMessage() {
+    displayTextOnScreen('h1', 'Secret Number Game');
+    displayTextOnScreen('p', 'Choose a number between 1 and 10');
 }
 
-function eraseInput(){
-  document.querySelector('.container__input').value = ''
-}
+displayInitialMessage();
 
-let secretNumber = getRandomNumber(0,10) 
-let tries = 1;
-
-function verificarChute(){
-  let choosenNumber = document.querySelector('.container__input').value;
-  console.log(secretNumber)
-  console.log(choosenNumber)
-  
-  if(choosenNumber < 1 || choosenNumber > 10){
-    alert('Digite um numero entre 1 e 10!')
-    eraseInput();
-  }
-  else{
-    if (choosenNumber == secretNumber){
-      let wordtry = tries > 1 ? 'tries' : 'try';
-      let qtdClick = `You did it in ${tries} ${wordtry}`
-      insertText('p', qtdClick)
-      eraseInput();
-      document.getElementById('reiniciar').removeAttribute('disabled')
+function checkGuess() {
+    let guess = document.querySelector('input').value;
+    
+    if (guess == secretNumber) {
+        displayTextOnScreen('h1', 'You got it!');
+        let attemptWord = attempts > 1 ? 'attempts' : 'attempt';
+        let attemptsMessage = `You discovered the secret number in ${attempts} ${attemptWord}!`;
+        displayTextOnScreen('p', attemptsMessage);
+        document.getElementById('restart').removeAttribute('disabled');
+    } else {
+        if (guess > secretNumber) {
+            displayTextOnScreen('p', 'The secret number is smaller');
+        } else {
+            displayTextOnScreen('p', 'The secret number is bigger');
+        }
+        attempts++;
+        clearField();
     }
-    else if ( choosenNumber < secretNumber){
-      insertText('p','Valor maior')
-      eraseInput();
-      
-    }
-    else if (choosenNumber > secretNumber)
-      {
-        insertText('p','Valor menor')
-        eraseInput();
-    }
-  }
-  tries++;
 }
 
-function restartGame(){
-  secretNumber = getRandomNumber(0,10)
-  console.log('restarting...')
-  tries = 1;
-  insertText('p','Choose between 1 and 10')
+function generateRandomNumber() {
+    let chosenNumber = parseInt(Math.random() * limitNumber + 1);
+    let listElementsCount = drawnNumbersList.length;
+
+    if (listElementsCount == limitNumber) {
+        drawnNumbersList = [];
+    }
+    if (drawnNumbersList.includes(chosenNumber)) {
+        return generateRandomNumber();
+    } else {
+        drawnNumbersList.push(chosenNumber);
+        console.log(drawnNumbersList)
+        return chosenNumber;
+    }
+}
+
+function clearField() {
+    guess = document.querySelector('input');
+    guess.value = '';
+}
+
+function restartGame() {
+    secretNumber = generateRandomNumber();
+    clearField();
+    attempts = 1;
+    displayInitialMessage();
+    document.getElementById('restart').setAttribute('disabled', true)
 }
