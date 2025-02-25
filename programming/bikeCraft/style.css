@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.carro,.bike{
+  width: 60%;
+  background-color: #010101;
+  color: whitesmoke;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 20px;
+
+  & p {
+    color: gray;
+    margin: 20px 0;
+  }
+
+  & span {
+    color: yellow;
+  }
+
+  & a {
+    display: inline-block;
+    background-color: yellow;
+    color: #010101;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
