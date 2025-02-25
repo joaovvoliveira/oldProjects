@@ -5,11 +5,77 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+/* .title {
   text-align: center;
+} */
+
+/* .container {
+  display: grid;
+  height: 1000px;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+  align-content: space-between;
+  place-content: center;
+  gap: 20px;
+} */
+
+
+.item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f7f7f7;
+  border: 1px solid #e7e7e7; 
+  padding: 20px;
+  border-radius: 4px;
+  /* place-items: end center; */
+
+
+  & h1 {
+    font-size: 48px;
+    grid-column: 2;
+    line-height: 1;
+    text-align: right;
+  }
+
+  & span {
+    font-size: 20px;
+  }
+  
+  & p {
+    font-size: 20px;
+    text-align: right;
+  }
+
+  & .price {
+    background-color: bisque;
+    padding: 10px;
+    border-radius: 5px;
+    place-self: start end;
+  }
+
+  & .buy{
+    background-color: aquamarine;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 20px;
+    place-self: center;
+  }
+
+  & img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
 }
 
+
+.product{
+  text-align: center;
+}
 .carro,.bike{
+  
   width: 60%;
   background-color: #010101;
   color: whitesmoke;
@@ -33,5 +99,15 @@ h1 {
     text-decoration: none;
     padding: 10px;
     border-radius: 10px;
+  }
+}
+
+.images{
+  width: 80vw;
+  margin: 0 auto;
+  
+  & img {
+    max-width: 100%;
+    display: inline-block;
   }
 }
