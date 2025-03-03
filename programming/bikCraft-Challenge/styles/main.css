@@ -1,12 +1,6 @@
 @import url("./reset.css");
-
-:root {
-  --yellow: #f4a80f;
-  --black: #000000;
-  --white: #fff;
-  --grey: #b2b2b2;
-  --container: 1200px;
-}
+@import url("./insurance.css");
+@import url("./root.css");
 
 b {
   color: var(--yellow);

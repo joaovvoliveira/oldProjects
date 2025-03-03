@@ -1,0 +1,82 @@
+@import url("./root.css");
+@import url("./reset.css");
+@import url("./main.css");
+
+.bik-insurance-page {
+  background-color: var(--grey);
+  padding-bottom: 40px;
+  
+  & .insurance-title {
+    font-size: 1.5em;
+    color: var(--black);
+    padding-top: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  & .main-title {
+    margin-top: -50px;
+  }
+
+  & h2 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  & .bg {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 50px;
+
+    & .bik-insurance-silver {
+      height: 400px;
+      display: grid;
+      justify-content: space-around;
+      background-color: var(--black);
+      color: var(--grey);
+      padding: 30px;
+      grid-row: 2/4;
+    }
+
+    & .bik-insurance-gold {
+      height: 600px;
+      display: grid;
+      justify-content: space-around;
+      align-content: space-around;
+      background-color: var(--black);
+      color: var(--grey);
+      padding: 30px;
+      grid-row: 1/5;
+    }
+
+    & h3,
+    p,
+    a {
+      grid-column: 1;
+    }
+
+    & h3 {
+      font-size: 3em;
+    }
+
+    & p {
+      font-size: 1.25em;
+      line-height: 2em;
+    }
+
+    & a {
+      text-align: center;
+      grid-column: 1;
+      height: 60px;
+    }
+
+    & .insurance-price {
+      grid-column: 2;
+      grid-row: 1;
+      font-weight: 800;
+      font-size: 1.25em;
+    }
+  }
+}
