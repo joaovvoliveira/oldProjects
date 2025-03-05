@@ -70,7 +70,7 @@ body {
             font-size: 3em;
           }
 
-          & span{
+          & span {
             font-size: 1.5em;
             display: block;
           }
@@ -80,7 +80,7 @@ body {
             display: block;
           }
 
-          & span::after{
+          & span::after {
             content: "Monthly";
             font-size: 0.75em;
             margin-top: -15px;
@@ -136,7 +136,7 @@ body {
             /* display: block; */
           }
         }
-        .gold{
+        .gold {
           color: var(--yellow);
         }
       }
@@ -147,22 +147,22 @@ body {
     max-width: 1200px;
     margin: 50px auto;
 
-    & .advantage-title{
+    & .advantage-title {
       font-size: 3.25em;
       color: var(--white);
       padding-bottom: 40px;
 
-      & b{
+      & b {
         color: var(--yellow);
       }
     }
 
     & .advantage-list {
       display: grid;
-      grid-template-columns: repeat(3,1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
 
-      & .advantage-item{
+      & .advantage-item {
         display: flex;
         flex-direction: column;
         color: var(--white);
@@ -178,6 +178,99 @@ body {
 
         & p {
           font-size: 1.25em;
+        }
+      }
+    }
+  }
+
+  & .faq {
+    background-color: var(--white);
+
+    padding-bottom: 40px;
+
+    & .faq-bg {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      & .faq-title {
+        font-size: 3em;
+        color: var(--black);
+        padding: 40px 0;
+
+        & b {
+          color: var(--yellow);
+        }
+      }
+
+      & .faq-list {
+        display: grid;
+        list-style: none;
+        padding: 0;
+
+        & .faq-item {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 10px;
+          padding: 15px;
+          position: relative;
+
+          & .faq-detail {
+            width: 15px;
+            height: 10px;
+            background-color: var(--yellow);
+            grid-column: 1;
+            align-self: center;
+          }
+
+          & .faq-desc {
+            grid-column: 2;
+          }
+
+          & span {
+            font-size: 1.5em;
+            font-weight: 800;
+          }
+
+          & p {
+            font-size: 1em;
+            grid-column: 2;
+          }
+        }
+
+        & .faq-item:nth-child(odd) {
+          background-color: rgb(208, 208, 208);
+        }
+      }
+    }
+  }
+
+  & .bik-foot {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: var(--grey);
+    padding: 30px 0;
+
+    & img {
+      width: 160px;
+    }
+
+    & .footer-contact,
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & h3 {
+        font-size: 2em;
+      }
+
+      & p {
+        font-size: 1.25em;
+        & a {
+          text-decoration: none;
+          color: var(--grey);
         }
       }
     }

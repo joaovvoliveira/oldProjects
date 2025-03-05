@@ -344,9 +344,6 @@ body {
     padding:  50px 0;
     color: var(--grey);
     
-    & img {
-    }
-    
     & .footer-contact {
       text-align: right;
       & h3 {
