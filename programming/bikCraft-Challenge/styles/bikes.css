@@ -35,7 +35,7 @@ body {
     margin: 0 auto;
     & p, h2 {
       font-size: 2em;
-      margin: 20px 0;
+      margin: 10px 0;
       color: var(--grey);
     }
 
