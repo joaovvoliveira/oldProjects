@@ -194,6 +194,7 @@ body {
       }
     }
   }
+  
   & .adressStores {
     display: flex;
     gap: 40px;
