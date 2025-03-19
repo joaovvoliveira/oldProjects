@@ -28,7 +28,7 @@
           <select class="produto-input" name="produto" id="produto">
             <option value="Fone de ouvido - R$100">Fone de ouvido - R$100</option>
             <option value="Celular - R$1400">Celular - R$1400</option>
-            <option value="Oculus VR - R$5000">Oculus VR - R$5000</option>
+            <option value="Oculus VR - R$5000">Oculos VR - R$5000</option>
           </select>
           </div>
         </label>
@@ -40,8 +40,8 @@
           </label>
 
           <section class="botoes-wrapper">
-            <button onclick="adicionar()" type="button" class="botao-form botao-adicionar">Adicionar</button>
-            <button onclick="limpar()" type="button" class="botao-form botao-limpar">Limpar</button>
+            <button onclick="addItem()" type="button" class="botao-form botao-adicionar">Adicionar</button>
+            <button onclick="cleanAll()" type="button" class="botao-form botao-limpar">Limpar</button>
           </section>
         </section>
       </form>
@@ -55,16 +55,14 @@
         <h2 class="carrinho__titulo">Produtos no carrinho</h2>
       </div>
 
-      <section class="carrinho__produtos" id="lista-produtos">
-        <section class="carrinho__produtos__produto">
-          <span class="texto-azul">1x</span> Celular <span class="texto-azul">R$1400</span>
-        </section>
+      <section class="carrinho__produtos" id="productsList">
+        
       </section>
 
       <div class="divisoria"></div>
 
       <p class="carrinho__total">
-        Total: <span class="texto-azul" id="valor-total">R$1400</span>
+        Total: <span class="texto-azul" id="valor-total">R$0</span>
       </p>
     </section>
   </main>
