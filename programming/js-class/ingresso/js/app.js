@@ -24,6 +24,9 @@ function buyIt() {
     alert('Qtd indisponivel')
   }
   
+  /*
+
+  */
 
 
 }
