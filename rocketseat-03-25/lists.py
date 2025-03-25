@@ -1,3 +1,4 @@
+import os
 listHomework = [('Wash the dishes', 'Pending'), ('Mop Floor', 'Pending')]
 
 
@@ -7,14 +8,10 @@ def pendingHomework(task):
 
 
 def showHomework():
+    if not listHomework:
+        print('No tasks to do')
     for index in listHomework:
         print(f'Task: {index[0]} - Status: {index[1]}')
-
-
-pendingHomework('Clear Bathroom')
-showHomework()
-
-print('Getting it done...')
 
 
 def completeHomework(task):
@@ -47,19 +44,12 @@ def removeHomework(task):
     #     if t[0] == task:
     #         listHomework.remove(t)
 
-
-removeHomework('Mop Floor')
-print('--------')
-print(listHomework)
-
 # listHomework = [(t[0], 'Completed')
 #                     if t[0] == task
 #                     else t
 #                     for t in listHomework
 
 
-completeHomework('Mop Floor')
-showHomework()
 # (t[0], 'Completed')
 #                     if t[0] == task
 #                     else t
@@ -86,12 +76,47 @@ def getTasks(task):
 # listPending = [(t[0], t[1]) for t in listHomework if t[1] == status]
 # print(listPending)
 
-
-getTasks('Wash the dishes')
-
-
 # newlist = [n * 2 for n in list if n > 4]
 # listn = [n for n in test if n < 1400]
 # test = [ n for n in range(1,2456) if n % 3 ==0]
 # [ (n,n*3) for n in range(1,11)]
 # list3 = [n.lower() for n in lista2]
+
+
+while True:
+    os.system('clear | cls')
+
+    print('Task Management')
+    print()
+    print('What u want to do ?')
+    print()
+    print('1 - get tasks list')
+    print('2 - Add task')
+    print('3 - Remove task')
+    print('4 - Mark as it done')
+    print('5 - find task')
+    print('0 - exit')
+    option = int(input('Type your option: '))
+
+    match option:
+        case 1:
+            showHomework()
+        case 2:
+            task = input('Type your task: ')
+            pendingHomework(task)
+        case 3:
+            task = input('Which task u want to remove: ')
+            removeHomework(task)
+        case 4:
+            task = input('Which task u want to complete: ')
+            completeHomework(task)
+        case 5:
+            task = input('Which task u want to find: ')
+            getTasks(task)
+        case 0:
+            break
+        case _:
+            print('Wrong Option')
+    print()
+    input('Press something to continue...')
+    os.system('clear')
