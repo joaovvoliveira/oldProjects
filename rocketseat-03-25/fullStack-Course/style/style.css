@@ -1,98 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('./reset.css');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("./reset.css");
 
 :root {
-    --orange:#FF4F00;
-    --green:#A7D8B7;
-    --brown:#7F4F24;
-    --snow:#F4F1F1;
-    --yellow: #F4A300;
-    
-    --bg-default: #F5F4F0;
-    --border-primary: #D9D9D9;
+  --orange: #ff4f00;
+  --green: #a7d8b7;
+  --brown: #7f4f24;
+  --snow: #f4f1f1;
+  --yellow: #f4a300;
 
-    --text-pri:#1B1B1B;
-    --text-sec:#333333;
-    --text-ter:#696969;
-    --text-green:#2C6F2E;
+  --bg-default: #f5f4f0;
+  --border-primary: #d9d9d9;
 
-    --font-pri: "Open Sans", sans-serif;
+  --text-pri: #1b1b1b;
+  --text-sec: #333333;
+  --text-ter: #696969;
+  --text-green: #2c6f2e;
+
+  --font-pri: "Open Sans", sans-serif;
 }
 
 body {
-    font-family: var(--font-pri);
-    background-color: var(--bg-default);
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    gap: 20px;
+  font-family: var(--font-pri);
+  background-color: var(--bg-default);
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  gap: 20px;
 
-    & .title {
-        font-size: 2em;
-        font-weight: 800;
-        padding-bottom: 10px;
+  & .title {
+    font-size: 2em;
+    font-weight: 800;
+    padding-bottom: 10px;
+  }
+
+  & .subTitle {
+    color: var(--text-green);
+    font-size: 1.25em;
+    font-weight: 600;
+  }
+
+  & .mainNextTrip {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    & .imgMain {
+      display: flex;
+      gap: 40px;
+      justify-content: space-around;
+      & img {
+        width: 400px;
+      }
     }
 
-    & .subTitle {
-        color: var(--text-green);
-        font-size: 1em;
-        font-weight: 600;
+    & p {
+      text-align: center;
+      padding: 10px 0;
+      font-style: italic;
     }
+  }
 
-    & .mainNextTrip{
-        max-width: 1280px;
-        margin: 0 auto;
-        
-        & .imgMain{
-            display: flex;
-            gap: 40px;
-            justify-content: space-around;
-            & img {    
-                width: 400px;
-            }
+  & .toDoOptions {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    & .toDoList {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 20px;
+
+      & .toDoItem {
+        background-color: var(--green);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px; 
+        position: relative;
+
+        & .toDoDesc {
+          display: flex;
+          flex-direction: column;
+          & span:nth-child(2) {
+            font-weight: 600;
+            padding: 0.25em 0;
+          }
+          & span:nth-child(3) {
+            font-weight: 200;
+          }
         }
 
-        & p {
+        & .toDoPrice {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          & span:nth-child(1) {
+            grid-row: 1;
+          }
+          & span:nth-child(2) {
+            grid-row: 2;
+          }
+          & span:nth-child(3) {
+            grid-row: 3;
+          }
+          & a {
             text-align: center;
-            padding: 10px 0;
-            font-style: italic;
+            text-decoration: none;
+            color: var(--text-sec);
+            font-size: 1.25em;
+            border-radius: 2em;
+            align-self: center;
+            padding: 0.25em 0;
+            background-color: var(--yellow);
+          }
         }
+      }
     }
+  }
+  & .topDestinations {
+    h3 {
+        padding: 10px 0;
+        font-size: 1.5em;
+    }
+    & .topDestinationsText{
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+    & .destinationsItems {
 
-    & .toDoOptions{
-        max-width: 1280px;
-        margin: 0 auto;
+        & span {
+            font-weight: 600;
+        }
 
-        & .toDoList {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: repeat(4,1fr);
-            margin-top: 20px;
-
-            & .toDoItem{
-                background-color: var(--green);
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                gap: 50px;
-
-                & .toDoDesc {
-                    display: flex;
-                    flex-direction: column;
-                    & span:nth-child(3){
-                        font-weight: 200;
-                    };
-                }
-
-                & .toDoPrice {
-                    display: grid;
-                    grid-template-columns: repeat(3,1fr);
-                    & span{
-                        grid:1;
-                    }
-                }
+        & ul {
+           & li {
+               list-style: decimal;
+            }
+            & li:last-child{
+                padding-bottom: 20px;
             }
         }
     }
-}
+  }
 
+  & footer {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    & p {
+        padding-bottom: 20px;
+    }
+    & span {
+        margin-bottom: 20px;
+    }
+  }
+}
