@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("./reset.css");
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+
+  header {
+    padding: 14px 0;
+    & p {
+      font-size: 1em;
+      font-weight: 600;
+      color: grey;
+      & strong {
+        font-size: 1.25em;
+        color: black;
+      }
+    }
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid rgb(245, 106, 106);
+    & ul {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      & li {
+        list-style: none;
+        & a {
+          img {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  & main {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    gap: 20px;
+    & section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h1 {
+        font-size: 2.5em;
+      }
+      & span {
+        font-size: 1.5em;
+        color: rgb(245, 106, 106);
+      }
+      & p {
+        font-size: 1.25em;
+        color: grey;
+      }
+      & a {
+        text-decoration: none;
+        color: rgb(245, 106, 106);
+        font-size: 1.25em;
+        width: 180px;
+        text-align: center;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 2px solid;
+        border-color: rgb(245, 106, 106);
+      }
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      max-height: 500px;
+    }
+    padding-bottom: 60px;
+    border-bottom: 2px solid rgb(207, 207, 207);
+  }
+
+  & section {
+    h2 {
+      font-size: 2em;
+      margin: 20px 0;
+      border-bottom: 4px solid rgb(245, 106, 106);
+      width: 200px;
+      padding-bottom: 10px;
+    }
+    & .sectionItens {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      & .itens {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        & img {
+          display: inline;;
+          width: 60px;
+          grid-row: 1/3;
+          grid-column: 1;
+          padding: 20px;
+          border: 1px solid rgb(245, 106, 106);
+          margin-right: 40px;
+        }
+        & h3,p {
+          grid-column: 2;
+        }
+
+      }
+    }
+  }
+}
