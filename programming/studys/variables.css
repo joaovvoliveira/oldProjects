@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic&display=swap');
+
+:root {
+    --font-family-sans: 'Open Sans', sans-serif;
+    --font-family-serif: 'Roboto', serif;
+    --font-family-mono: 'Courier New', monospace;
+    --font-family-primary: "Special Gothic", sans-serif;
+
+    --font-size-base: 1.5em;
+    --font-size-lg: 2em;
+    --font-size-sm: 1em;
+
+    --line-height-base: 1.5;
+    --line-height-lg: 1.6;
+    --line-height-sm: 1.4;
+
+    --brown: #462424;
+    --blue: ##1e2837;
+    --grey: #495159;
+    --orange: #4c382b;
+    --white: #e4e4e4;
+}

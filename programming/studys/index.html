@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Device Shop Checkout | devChallenges.io</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+      sizes="96x96"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header-bg">
+      <h2>Checkout</h2>
+      <span>3 ITEMS</span>
+    </header>
+    <main>
+      <section class="products">
+        <ul class="productList">
+          <li class="productItem">
+            <div class="productImage">
+              <img
+                src="./device-shop-checkout-master/resources/Gold@2x.png"
+                alt="Iphone 12"
+                srcset=""
+              />
+            </div>
+            <div class="productInfo">
+              <span class="productName">iPhone 12 Pro</span>
+              <span class="productColor">Golden</span>
+              <span class="productQtd">1x</span>
+            </div>
+            <div class="productDesc">
+              <span class="productPrice">€999.00</span>
+              <img
+                class="btnRemove"
+                src="./device-shop-checkout-master/resources/close-icon.svg"
+                alt="Remove Button"
+                srcset=""
+              />
+            </div>
+             
+          </li>
+          <li class="productItem">
+            <div class="productImage">
+              <img
+                src="./device-shop-checkout-master/resources/Apple-watchx2.png"
+                alt="Apple Watch"
+                srcset=""
+              />
+            </div>
+            <div class="productInfo">
+              <span class="productName">iPhone 12 Pro</span>
+              <span class="productColor">Golden</span>
+              <span class="productQtd">1x</span>
+            </div>
+            <div class="productDesc">
+              <span class="productPrice">€999.00</span>
+              <img
+                class="btnRemove"
+                src="./device-shop-checkout-master/resources/close-icon.svg"
+                alt="Remove Button"
+                srcset=""
+              />
+            </div>
+             
+          </li>
+          <li class="productItem">
+            <div class="productImage">
+              <img
+                src="./device-shop-checkout-master/resources/iMac@2x.png"
+                alt="iMac"
+                srcset=""
+              />
+            </div>
+            <div class="productInfo">
+              <span class="productName">iPhone 12 Pro</span>
+              <span class="productColor">Golden</span>
+              <span class="productQtd">1x</span>
+            </div>
+            <div class="productDesc">
+              <span class="productPrice">€999.00</span>
+              <img
+                class="btnRemove"
+                src="./device-shop-checkout-master/resources/close-icon.svg"
+                alt="Remove Button"
+                srcset=""
+              />
+            </div>
+             
+          </li>
+        </ul>
+        <br />
+        <div class="couponSection">
+            <input type="text" name="" placeholder="Enter coupon code" id="inputCoupon" />
+            <input type="submit" value="Apply Coupon" id="btnCoupon" />
+
+        </div>
+        <div>
+          <span>Sub total</span>
+          <span>Tax</span>
+          <span>Total</span>
+        </div>
+        <div>
+          <span class="productPrice">0</span>
+          <span class="productTax">0</span>
+          <span class="productTotalPrice">0</span>
+        </div>
+      </section>
+      <fieldset>
+        <legend>Contact Information</legend>
+
+        <label for="name">First & Last name</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter first & last name"
+          id=""
+        />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter your email" id="" />
+
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" placeholder="+353 (000) 0000000" id="" />
+
+        <label for="Country">Country</label>
+        <select name="country" id="">
+          <option value="Ireland">Ireland</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="United States">United States</option>
+        </select>
+
+        <label for="Postal Code"></label>
+        <input type="text" name="postalCode" placeholder="Postal Code" id="" />
+
+        <button type="button">Continue</button>
+      </fieldset>
+    </main>
+
+    <div class="author-info">
+      Coded by <a href="#">João Victor</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div>
+  </body>
+</html>
