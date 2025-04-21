@@ -1,0 +1,12 @@
+footer {
+  max-width: 1280px;
+  margin-inline: auto;
+  display: flex;
+  padding-block: 24px;
+  justify-content: space-evenly;
+  font: var(--font-sm);
+  color: var(--text-color-secondary);
+  & span {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,14 @@
+.pictures {
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-block: 24px;
+    margin-inline: auto;
+    justify-content: center;
+    
+    & img {
+        height: 286px;
+        width: 286px;
+    }
+}
