@@ -1,28 +1,38 @@
 :root {
-    --brand-color-light: #60a5fa;
-    --brand-color-dark: #1d4ed8;
+  --brand-color-light: #60a5fa;
+  --brand-color-dark: #1d4ed8;
 
-    --bg-color: #0f172a;
-    --stroke-color: #1e293b;
+  --bg-color: #0f172a;
+  --stroke-color: #1e293b;
 
-    --text-color-primary: #f1f5f9;
-    --text-color-secondary: #CBD5E1;
+  --text-color-primary: #f1f5f9;
+  --text-color-secondary: #cbd5e1;
 
-    --font-family-primary: "Archivo", sans-serif;
+  --font-family-primary: "Archivo", sans-serif;
 
-    --font-lg-extrabold: 800 1.5rem/1.25 var(--font-family-primary);
-    --font-md-extrabold: 800 1rem/1.4 var(--font-family-primary);
-    --font-sm-extrabold: 800 0.875rem/1.4 var(--font-family-primary);
-    --font-span-semibold: 600 0.875rem/1.45 var(--font-family-primary);
-    --font-paragraph: 400 0.875/1.6 var(--font-family-primary);
+  --font-lg-extrabold: 800 1.5rem/1.25 var(--font-family-primary);
+  --font-md-extrabold: 800 1rem/1.4 var(--font-family-primary);
+  --font-sm-extrabold: 800 0.875rem/1.4 var(--font-family-primary);
+  --font-span-semibold: 600 0.875rem/1.45 var(--font-family-primary);
+  --font-paragraph: 400 0.875/1.6 var(--font-family-primary);
 }
 
 body {
-    font-family: var(--font-family-primary);
-    background-color: var(--bg-color);
+  font-family: var(--font-family-primary);
+  background-color: var(--bg-color);
 }
 
 .container {
-    max-width: 1216px;
-    margin-inline: auto;
+  max-width: 1216px;
+  margin-inline: auto;
+}
+
+.spotlight {
+  font: var(--font-span-semibold);
+  font-size: 10px;
+  background-color: var(--brand-color-dark);
+  padding: 4px 8px;
+  color: var(--text-color-primary);
+  border-radius: 5px;
+  width: fit-content;
 }
