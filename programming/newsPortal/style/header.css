@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        font: var(font-lg-extrabold);
+        color: var(--brand-color-light);
+        margin-block: 20px;
+    }
+    & div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    & div img {
+        width: 20px;
+        height: 20px;
+    }
+    & div span {
+        color: var(--text-color-primary);
+        font: var(font-md-extrabold);
+    }
+}

@@ -1,0 +1,15 @@
+nav {
+    ul {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding-block: 14px;
+        font: var(--font-span-semibold);
+        color: var(--text-color-secondary);
+        cursor: pointer;
+        border-top: 1px solid var(--stroke-color);
+        border-bottom: 1px solid var(--stroke-color);
+    }
+
+}
