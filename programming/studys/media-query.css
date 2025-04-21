@@ -1,30 +1,113 @@
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 523px) {
   body {
-
     & .header-bg {
-        background-position: center;
-        width: 100%;
-        max-width: 100%;
+      background-position: center;
+      width: 100%;
+      max-width: 100%;
 
-        & .titleCheckout {
-            font-size: var(--font-size-sm);
-        }
-        & .span3Items {
-            font-size: var(--font-size-xs);
-        }
-    }
-    & .main {
-
-      grid-template-columns: 1fr;
-
-      & .product {
-        border-radius: 20px 20px 0 0;
-
-        
-
-      & .contactSection {
-        border-radius: 0 0 20px 20px;
+      .titleCheckout {
+        font-size: var(--font-size-sm);
       }
+
+      .span3Items {
+        margin-top: 10px;
+        font-size: var(--font-size-xs);
+      }
+    }
+
+    & .main {
+      width: 100%;
+      max-width: 100%;
+      grid-template-columns: 1fr;
+      position: relative;
+      top: -50px;
+
+      .products {
+        padding: 10px;
+
+        .productList {
+          .productItem {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            justify-items: start;
+
+            .productImage {
+              width: 90px;
+              height: 90px;
+
+              img {
+                padding: 5px;
+              }
+            }
+
+            & .productInfo {
+              font-size: var(--font-size-xs);
+
+              & .productName {
+                font-size: var(--font-size-sm);
+              }
+
+              & .productPrice {
+                font-size: var(--font-size-xs);
+              }
+            }
+
+            & .productDesc {
+              & .coin {
+                font-size: var(--font-size-xs);
+                font-weight: 600;
+                color: var(--blue);
+              }
+              img {
+                height: 25px;
+                width: 25px;
+              }
+            }
+          }
+        }
+        & .couponSection {
+          grid-template-columns: 60% 30%;
+          margin: 0 auto;
+          & #inputCoupon {
+            height: 40px;
+            width: 100%;
+            padding: 0 10px;
+            font-size: 1em;
+          }
+          & #btnCoupon {
+            height: 40px;
+            font-size: 1em;
+            padding: 0 10px;
+          }
+        }
+        & .productInfoPrices {
+          font-size: 1.25em;
+          font-weight: 400;
+          margin-top: 10px;
+          margin-right: 30px;
+        }
+      }
+      .contactSection {
+        gap: 20px;
+        border-radius: 0 0 20px 20px;
+
+        & h2 {
+          font-size: 1.5em;
+        }
+
+        & label,
+        input,
+        select,
+        button {
+          font-size: 1em;
+        }
+      }
+    }
+    footer {
+      text-align: center;
+      width: 100%;
+      margin-top: -20px;
+      margin-bottom: 20px;
     }
   }
 }
