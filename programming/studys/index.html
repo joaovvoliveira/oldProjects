@@ -16,10 +16,10 @@
   </head>
   <body>
     <header class="header-bg">
-      <h2>Checkout</h2>
-      <span>3 ITEMS</span>
+      <h2 class="titleCheckout">Checkout</h2>
+      <span class="span3items">3 ITEMS</span>
     </header>
-    <main>
+    <main class="main">
       <section class="products">
         <ul class="productList">
           <li class="productItem">
@@ -36,7 +36,7 @@
               <span class="productQtd">1x</span>
             </div>
             <div class="productDesc">
-              <span class="productPrice">€999.00</span>
+              <span class="coin">€<span class="iphonePrice">999.00</span></span>
               <img
                 class="btnRemove"
                 src="./device-shop-checkout-master/resources/close-icon.svg"
@@ -55,12 +55,12 @@
               />
             </div>
             <div class="productInfo">
-              <span class="productName">iPhone 12 Pro</span>
+              <span class="productName">Apple Watch</span>
               <span class="productColor">Golden</span>
               <span class="productQtd">1x</span>
             </div>
             <div class="productDesc">
-              <span class="productPrice">€999.00</span>
+              <span class="coin">€<span class="watchPrice">999.00</span></span>
               <img
                 class="btnRemove"
                 src="./device-shop-checkout-master/resources/close-icon.svg"
@@ -79,12 +79,12 @@
               />
             </div>
             <div class="productInfo">
-              <span class="productName">iPhone 12 Pro</span>
+              <span class="productName">iMac</span>
               <span class="productColor">Golden</span>
               <span class="productQtd">1x</span>
             </div>
             <div class="productDesc">
-              <span class="productPrice">€999.00</span>
+              <span class="coin">€<span class="iMacPrice">999.00</span></span>
               <img
                 class="btnRemove"
                 src="./device-shop-checkout-master/resources/close-icon.svg"
@@ -95,59 +95,93 @@
              
           </li>
         </ul>
-        <br />
+        <hr />
         <div class="couponSection">
-            <input type="text" name="" placeholder="Enter coupon code" id="inputCoupon" />
-            <input type="submit" value="Apply Coupon" id="btnCoupon" />
-
+          <input
+            type="text"
+            name=""
+            placeholder="Enter coupon code"
+            id="inputCoupon"
+          />
+          <input type="submit" value="Apply Coupon" id="btnCoupon" />
         </div>
-        <div>
-          <span>Sub total</span>
-          <span>Tax</span>
-          <span>Total</span>
-        </div>
-        <div>
-          <span class="productPrice">0</span>
-          <span class="productTax">0</span>
-          <span class="productTotalPrice">0</span>
+        <div class="productInfoPrices">
+          <div class="productPrices">
+            <span>Sub total</span>
+            <span>Tax</span>
+            <span>Total</span>
+          </div>
+          <div class="productValues">
+            <span class="coin">€<span class="productPriceTotal">0</span></span>
+            <span class="coin">€<span class="productTax">0</span></span>
+            <span class="coin">€<span class="productTotalPrice">0</span></span>
+          </div>
         </div>
       </section>
-      <fieldset>
-        <legend>Contact Information</legend>
+      <section class="contactSection">
+        <h2>Contact Information</h2>
 
-        <label for="name">First & Last name</label>
-        <input
-          type="text"
-          name="name"
-          placeholder="Enter first & last name"
-          id=""
-        />
+        <div class="name">
+          <label for="name">First & Last name</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter first & last name"
+            id=""
+          />
+        </div>
 
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="Enter your email" id="" />
+        <div class="email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            id=""
+          />
+        </div>
 
-        <label for="phone">Phone</label>
-        <input type="tel" name="phone" placeholder="+353 (000) 0000000" id="" />
+        <div class="phone">
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            name="phone"
+            placeholder="+353 (000) 0000000"
+            id=""
+          />
+        </div>
 
-        <label for="Country">Country</label>
-        <select name="country" id="">
-          <option value="Ireland">Ireland</option>
-          <option value="United Kingdom">United Kingdom</option>
-          <option value="United States">United States</option>
-        </select>
+        <div class="countryPostalCode">
+          <div class="country">
+            <label for="Country">Country</label>
+            <select name="country" id="">
+              <option value="Ireland">Ireland</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+            </select>
+          </div>
 
-        <label for="Postal Code"></label>
-        <input type="text" name="postalCode" placeholder="Postal Code" id="" />
+          <div class="postalCode">
+            <label for="Postal Code">Postal Code</label>
+            <input
+              type="text"
+              name="postalCode"
+              placeholder="Postal Code"
+              id=""
+            />
+          </div>
+        </div>
 
         <button type="button">Continue</button>
-      </fieldset>
+      </section>
     </main>
-
     <div class="author-info">
       Coded by <a href="#">João Victor</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>

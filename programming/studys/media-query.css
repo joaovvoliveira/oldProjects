@@ -1,0 +1,30 @@
+@media screen and (max-width: 450px) {
+  body {
+
+    & .header-bg {
+        background-position: center;
+        width: 100%;
+        max-width: 100%;
+
+        & .titleCheckout {
+            font-size: var(--font-size-sm);
+        }
+        & .span3Items {
+            font-size: var(--font-size-xs);
+        }
+    }
+    & .main {
+
+      grid-template-columns: 1fr;
+
+      & .product {
+        border-radius: 20px 20px 0 0;
+
+        
+
+      & .contactSection {
+        border-radius: 0 0 20px 20px;
+      }
+    }
+  }
+}
