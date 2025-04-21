@@ -1,12 +1,5 @@
 .mostRead {
-    padding-block-end: 80px;
-    border-bottom: 1px solid var(--stroke-color);
-  h3 {
-    font: var(--font-sm-extrabold);
-    color: var(--text-color-primary);
-    font-weight: 400;
-    padding-top: 12px;
-  }
+    padding-block-end: 80px;  
 
   ul {
     list-style: none;
