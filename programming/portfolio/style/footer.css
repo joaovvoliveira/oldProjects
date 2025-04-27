@@ -48,3 +48,17 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    footer {
+        .container {
+            padding-block: 64px 100px;
+
+            .socialMedia {
+                padding: 0;
+            }
+        }
+    }
+
+}
