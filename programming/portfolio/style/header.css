@@ -1,21 +1,28 @@
 header {
+    width: 100%;
     background-image: url("../images/Background_Intro.png");
-
+    background-size: cover;
     & div {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-block-start: 120px;
+        padding-block-start: 100px;
         padding-block-end: 50px;
         text-align: center;
-
+        
+        .logoVictor {
+            width: 150px;
+            height: 150px;
+        }
+        
         & .profilePicture {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 50%;
-            border: 3px solid var(--green);
+            border: 4px solid var(--red);
+            margin-block-start: 20px;
             margin-bottom: 56px;
         }
         & .name {

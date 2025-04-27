@@ -29,4 +29,27 @@
 .container {
     max-width: 1280px;
     margin-inline: auto;
+    text-align: center;
+}
+
+.redHighlight {
+    font: var(--inconsolata-subtitle);
+    color: var(--red);
+    margin-bottom: 8px;
+}
+
+.underHighlight {
+    font: var(--asap-font-md);
+    color: var(--gray-600);
+}
+
+.titleSm {
+    color: var(--gray-600);
+    font: var(--asap-font-sm);
+    margin-block: 12px 8px;
+}
+
+.textSm {
+    color: var(--gray-500);
+    font: var(--maven-font-sm);
 }
