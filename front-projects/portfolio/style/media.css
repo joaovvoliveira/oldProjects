@@ -1,0 +1,94 @@
+@media screen and (max-width: 480px) {
+    header {
+        div {
+
+            padding: 0 12px;
+            .name {
+                background-color: var(--gray-200);
+                padding: 12px;
+                border-radius: 20px;
+            }
+            ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+            }
+            
+            & img:last-child {
+                margin-block: 48px 24px;
+
+            }
+            
+        }
+    }
+    main {
+        padding-block: 36px 72px;
+        & .container {
+            .projects {
+                margin-block-start: 24px;
+                grid-template-columns: 1fr;
+                max-width: 100%;
+                width: 320px;
+            }
+
+        }
+    }
+    .services {
+        padding-block: 44px 60px;
+
+        .servicesList {
+            flex-direction: column;
+            
+            .servicePosition {
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+    header {
+        div {
+
+            padding: 0 12px;
+            .name {
+                background-color: var(--gray-200);
+                padding: 12px;
+                border-radius: 20px;
+            }
+            ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+            }
+            
+            & img:last-child {
+                margin-block: 48px 24px;
+
+            }
+            
+        }
+    }
+    main {
+        padding-block: 36px 72px;
+        & .container {
+            .projects {
+                margin-block-start: 24px;
+                grid-template-columns: 1fr 1fr;
+                max-width: 100%;
+                width: 80%;
+            }
+
+        }
+    }
+    .services {
+        padding-block: 44px 60px;
+
+        .servicesList {
+            flex-wrap: wrap;            
+            .servicePosition {
+                align-items: center;
+            }
+        }
+    }
+}

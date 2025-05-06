@@ -1,0 +1,64 @@
+footer {
+    width: 100%;
+    background-image: url("../images/Background_Contacts.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .container {
+        padding-block: 128px 200px;
+        h2 {
+            color: var(--purple);
+        }
+        .socialMedia {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 48px;
+
+            .socialMediaItem {
+                margin-inline: auto;
+                display: flex;
+                width: 400px;
+                padding: 23px;
+                background-color: var(--gray-300);
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                
+                img {
+                    width: 30px;
+                    height: auto;
+                }
+                & span {
+                    font: var(--maven-font-md);
+                    color: var(--gray-500);
+                    margin-inline: 12px;
+                }
+
+                a {
+                    img {
+                        width: 15px;
+                        height: 15px;
+                    }
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    footer {
+        .container {
+            padding-block: 64px 100px;
+
+            .socialMedia {
+                padding: 0;
+            }
+        }
+    }
+
+}

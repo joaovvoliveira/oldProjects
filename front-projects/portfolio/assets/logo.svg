@@ -1,0 +1,15 @@
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#16181D"/>
+  <g fill="#534830">
+    <!-- Ícone: engrenagem + código -->
+    <g transform="translate(20,20)">
+      <circle cx="30" cy="30" r="28" stroke="#534830" stroke-width="4" fill="none"/>
+      <polygon points="15,30 20,25 20,35" fill="#534830"/>
+      <polygon points="45,30 40,25 40,35" fill="#534830"/>
+      <rect x="27" y="23" width="6" height="14" rx="1" fill="#534830" transform="rotate(10 30 30)"/>
+      <circle cx="30" cy="0" r="5" fill="#534830"/>
+    </g>
+    <!-- Texto: Victor -->
+    <text x="80" y="60" font-size="40" font-family="Arial, sans-serif" fill="#534830">Victor</text>
+  </g>
+</svg>

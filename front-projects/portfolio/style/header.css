@@ -1,0 +1,80 @@
+header {
+    width: 100%;
+    background-image: url("../images/Background_Intro.png");
+    background-size: cover;
+    & div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-block-start: 100px;
+        padding-block-end: 50px;
+        text-align: center;
+        
+        .logoVictor {
+            width: 150px;
+            height: 150px;
+        }
+        
+        & .profilePicture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--red);
+            margin-block-start: 20px;
+            margin-bottom: 56px;
+        }
+        & .name {
+            font: var(--inconsolata-subtitle);
+            color: var(--gray-500);
+            & strong {
+                color: var(--red);
+            }
+        }
+
+        & .title {
+            font: var(--asap-font-lg);
+            color: var(--gray-600);
+            padding-block: 8px 20px;
+        }
+
+        & .desc {
+            font: var(--asap-font-sm);
+            color: var(--gray-400);
+            max-width: 1000px;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 80px;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 9px 16px;
+                border-radius: 20px;
+                background-color: var(--gray-300);
+                color: var(--gray-500);
+                font: var(--maven-font-md);
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        & img:last-child {
+            display: none;
+            cursor: pointer;
+            margin-block: 94px 50px;
+            text-align: center;
+        }
+    }
+}

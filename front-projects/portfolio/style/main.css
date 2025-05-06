@@ -1,0 +1,39 @@
+main {
+    background-color: #16181d;
+    padding-block: 72px 144px;
+    & .container {
+
+        .projects {
+            margin-block-start: 56px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            width: 1040px;
+            margin-inline: auto;
+
+            .projectItem {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: var(--gray-300);
+                padding-inline: 12px;
+                padding-block: 12px 17px;
+                border-radius: 10px;
+                img {
+                    width: 300px;
+                    height: 150px;
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                }
+
+                .textSm {
+                    & a {
+                        text-underline-offset: 4px;
+                        color: var(--gray-500);
+                    }
+                }
+            }
+        }
+    }
+}
