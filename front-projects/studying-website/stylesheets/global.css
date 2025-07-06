@@ -1,0 +1,63 @@
+:root {
+  --azul-mais-escuro: #050D42;
+  --azul-escuro: #1E3A8A;
+  --azul-principal: #004D86;
+  --azul-claro: #DBEAFE;
+  --azul-mais-claro: #EFF6FF;
+  --branco: #FFFFFF;
+  --cinza-texto: #374151;
+  --background: #004D86;
+
+  --font-ubuntu: 'Ubuntu', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-fira-sans: 'Fira Sans', sans-serif;
+
+  --font-title: 400 4rem/1.25 var(--font-ubuntu);
+  --font-xl: 500 2.25rem/1.5 var(--font-ubuntu);
+  --font-lg: 400 1.50rem/1.5 var(--font-ubuntu);
+  --font-md: 400 1.25rem/1.5 var(--font-ubuntu);
+  --font-sm: 400 1rem/1.2 var(--font-ubuntu);
+  
+  /*
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Fira Sans", sans-serif;
+  */
+
+
+}
+
+h1,h2,h3,p {
+  color: var(--branco);
+  font-family: var(--font-ubuntu);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.btn-default {
+    text-decoration: none;
+    color: var(--azul-mais-escuro);
+    border: 3px solid var(--azul-principal);
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: fit-content;
+    font: var(--font-md);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}

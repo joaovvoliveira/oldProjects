@@ -1,0 +1,50 @@
+.main {
+    background-color: var(--background);
+    padding-block: +1rem;
+}
+
+main > .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.75rem;
+
+        h1 {
+            font: var(--font-title);
+        }
+
+        p {
+            font: var(--font-lg);
+        }
+
+        .btn-default {
+            background-color: var(--branco);
+            border: none;
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    main > .container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 3rem;
+
+        .main-content {
+            align-items: center;
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.25rem;
+            }
+        }
+        img {
+            max-width: 400px;
+        }
+    }
+}
