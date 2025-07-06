@@ -1,0 +1,17 @@
+.btn-default {
+  padding: 1rem 2rem;
+  display: inline-block;
+  background-color: #ffbb00;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  color: #332200;
+  font-size: 18px;
+  line-height: 1.33;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+.btn-default:hover {
+  background-color: #e59317;
+}
+

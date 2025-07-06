@@ -42,3 +42,30 @@
       }
   }
 }
+
+@media (max-width: 800px) {
+  .header-menu {
+      gap: 20px;
+
+      a {
+          background: #111;
+          padding: 12px 16px;
+          border-radius: 10px;
+      }
+
+      a:hover {
+          background-color: #2e2e2e;
+      }
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+      gap: 12px;
+
+      a {
+          padding: 8px 12px;
+          font-size: 14px;
+      }
+  }
+}
