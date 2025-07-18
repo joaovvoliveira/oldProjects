@@ -2,6 +2,12 @@
 @import url(./header.css);
 @import url(./main.css);
 @import url(./components.css);
+@import url(/stylesheet/bikes/bikes-list.css);
+@import url(./tech.css);
+@import url(./partners.css);
+@import url(./statement.css);
+@import url(./insurance.css);
+
 /* INICIO HEADER STYLE */
 
 /* FIM HEADER STYLE */

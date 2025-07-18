@@ -1,0 +1,29 @@
+.insurance-bg {
+    background-color: var(--c11);
+
+    .insurance {
+      h2 {
+        font: var(--font-1-xxl);
+        color: var(--c0);
+        display: block;
+        margin-bottom: 60px;
+        strong {
+          color: var(--p1);
+        }
+      }
+    }
+    .insurance-item {
+      h3 {
+          font: var(--font-1-xl);
+          color: var(--c6);
+      }
+        span {
+            font: var(--font-1-xl);
+            color: var(--c0);
+            > span {
+                font: var(--font-1-xs);
+                color: var(--c6);
+            }
+        }
+    }
+}

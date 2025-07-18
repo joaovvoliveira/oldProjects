@@ -7,9 +7,7 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 2rem;
-      padding: 20px;
-      max-width: 1160px;
-      margin: 0 auto;
+      padding-block: 20px;
 
       .header-menu {
           display: flex;
