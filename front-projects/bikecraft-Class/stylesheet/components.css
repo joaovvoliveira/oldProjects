@@ -17,10 +17,18 @@
   line-height: 1.33;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+  max-width: max-content;
 }
 
 .btn-default:hover {
   background-color: #e59317;
+}
+.btn-default.secundary {
+  background: var(--c10);
+  color: var(--c2);
+}
+.btn-default.secundary:hover {
+  background-color: var(--c9);
 }
 
 .link {

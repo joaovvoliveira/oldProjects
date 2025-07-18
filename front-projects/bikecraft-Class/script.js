@@ -1,10 +1,5 @@
-console.log("Hello, World!");
+const silver = document.querySelector('#silver');
 
-function teste(num) {
-    if (num > 7) {
-        console.log(num);
-    }
-}
-
-teste(6);
-teste(8);
+console.log(silver.textContent);
+console.log(silver.innerText);
+console.log(silver.innerHTML);

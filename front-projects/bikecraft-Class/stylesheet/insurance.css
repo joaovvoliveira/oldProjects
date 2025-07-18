@@ -2,28 +2,79 @@
     background-color: var(--c11);
 
     .insurance {
-      h2 {
-        font: var(--font-1-xxl);
-        color: var(--c0);
-        display: block;
-        margin-bottom: 60px;
-        strong {
-          color: var(--p1);
+        padding-block: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+
+        h2 {
+            font: var(--font-1-xxl);
+            color: var(--c0);
+            display: block;
+            margin-bottom: 60px;
+            grid-column: 1/-1;
+            strong {
+                color: var(--p1);
+            }
         }
-      }
     }
     .insurance-item {
-      h3 {
-          font: var(--font-1-xl);
-          color: var(--c6);
-      }
+        background-color: var(--c12);
+        padding: 32px 32px 32px 60px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        h3 {
+            font: var(--font-1-xl);
+            color: var(--c6);
+            margin-bottom: 40px;
+        }
         span {
             font: var(--font-1-xl);
             color: var(--c0);
+            grid-column: 2;
+            display: block;
+            text-align: right;
             > span {
                 font: var(--font-1-xs);
                 color: var(--c6);
             }
         }
+        ul {
+            font: var(--font-2-m);
+            color: var(--c0);
+            grid-column: 1/-1;
+            margin-bottom: 32px;
+            li + li {
+                margin-top: 20px;
+            }
+            li {
+              position: relative;
+            }
+            li::before {
+              content: "";
+              display: block;
+              width: 13px;
+              height: 9px;
+              background-image: url('../assets/icones/lista.svg');
+              position: absolute;
+              left: -21px;
+              top: 9px;
+          }
+        }
+        
+        a {
+            grid-column: 1/-1;
+        }
     }
+}
+
+
+@media (max-width: 800px){
+  .insurance-bg {
+    .insurance {
+      grid-template-columns: 1fr;
+    }
+
+  }
 }
