@@ -2,6 +2,7 @@
  
   --font-1-xxl: 600 4rem/3.5rem 'Poppins', sans-serif;
   --font-1-xl: 600 2rem/2.5rem 'Poppins', sans-serif;
+  --font-2-xl: 600 2rem/2.5rem 'Roboto', sans-serif;
   --font-1-l: 400 1.5rem/2.25rem 'Poppins', sans-serif;
   --font-2-l: 400 1.5rem/2.25rem 'Roboto', sans-serif;
   --font-2-l-b: 500 1.5rem/2.25rem 'Roboto', sans-serif; /* with 1.5% letter spacing + uppercase */
@@ -42,7 +43,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6,blockquote {
+h1, h2, h3, h4, h5, h6,blockquote,dt,dd {
   margin: 0;
   padding: 0;
 }

@@ -1,3 +1,9 @@
+#seguros {
+  .insurance {
+    padding-bottom: 40px;
+  }
+}
+
 .insurance-bg {
     background-color: var(--c11);
 
@@ -19,6 +25,7 @@
             }
         }
     }
+
     .insurance-item {
         background-color: var(--c12);
         padding: 32px 32px 32px 60px;

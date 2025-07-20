@@ -1,0 +1,118 @@
+.seguros-vantagens-bg {
+    background-color: var(--c12);
+
+    .seguros-vantagens {
+        padding-block: 60px;
+
+        h2 {
+            margin-bottom: 60px;
+            font: var(--font-1-xxl);
+            color: var(--c0);
+        }
+        
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, max-content));
+            gap: 40px 80px;
+            li {
+                h3 {
+                    font: var(--font-1-l);
+                    color: var(--c0);
+                    margin-bottom: 8px;
+                }
+                img {
+                    margin-bottom: 8px;
+                }
+                p {
+                    font: var(--font-2-s);
+                    color: var(--c5);
+                }
+            }
+        }
+    }
+}
+
+.perguntas {
+    h2 {
+        padding-block: 60px;
+        font: var(--font-1-xl);
+    }
+
+    dl {
+        div {
+            padding: 20px;
+            border-radius: 4px;
+
+            dt {
+                font: var(--font-1-m-b);
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+            }
+            dd {
+                font: var(--font-2-s);
+                color: var(--c9);
+                padding-left: 20px;
+                padding-top: 8px;
+                max-width: 80ch;
+            }
+        }
+        div:nth-child(odd) {
+            background-color: var(--c2);
+        }
+    }
+    dt::before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 8px;
+        background-color: var(--p1);
+    }
+
+    dt::after {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 6px;
+        background-image: url("../assets/icones/seta-abrir.svg");
+    }
+}
+
+@media (max-width: 800px) {
+    .seguros-vantagens-bg {
+        .seguros-vantagens {
+            padding-block: 40px;
+            h2 {
+                margin-bottom: 40px;
+            }
+            ul {
+                gap: 20px;
+            }
+        }
+    }
+
+    .perguntas {
+      padding-block: 40px;
+      h2 {
+        margin-bottom: 40px;
+      }
+    }
+}
+
+@media (max-width: 600px) {
+    .seguros-vantagens-bg {
+        .seguros-vantagens {
+            padding-block: 20px;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+            ul {
+                margin-top: 40px;
+                gap: 10px;
+            }
+        }
+    }
+}
