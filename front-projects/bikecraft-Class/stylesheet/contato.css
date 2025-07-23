@@ -1,0 +1,79 @@
+
+.contato {
+    background: linear-gradient(var(--c11) 300px, var(--c1) 0px);
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    .contato-formulario,
+    .contato-dados {
+        padding: 60px;
+        box-sizing: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+    .contato-dados {
+        background-color: var(--c12);
+        border-radius: 5px 0 0 5px;
+
+        h2 {
+            font: var(--font-1-m);
+            color: var(--c0);
+            margin-bottom: 60px;
+        }
+        .adressContact {
+            font: var(--font-2-s);
+            color: var(--c4);
+            margin-bottom: 32px;
+            padding-left: 30px;
+            background: url(../assets/icones/local.svg) no-repeat 0 2px;
+            p {
+                margin-bottom: 8px;
+            }
+        }
+        .contato-meios {
+            font: var(--font-2-s);
+            color: var(--c4);
+            a {
+                display: block;
+                max-width: max-content;
+                margin-bottom: 8px;
+                padding-left: 30px;
+            }
+            a:hover {
+                color: var(--c0);
+            }
+            a:first-child {
+                background: url(../assets/icones/email.svg) no-repeat 0 2px;
+            }
+            a:nth-child(2) {
+                margin-bottom: 32px;
+            }
+            a:last-child {
+                background: url(../assets/icones/telefone.svg) no-repeat 0 2px;
+            }
+        }
+        .contato-redes {
+            display: flex;
+            gap: 32px;
+            padding-left: 30px;
+            margin-top: 24px;
+        }
+    }
+    .contato-formulario {
+        background-color: var(--c0);
+        border-radius: 0 5px 5px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .contato {
+        grid-template-columns: 1fr;
+        .contato-dados {
+            border-radius: none;
+            margin-bottom: 0;
+            .contato-meios {
+                gap: 16px;
+                a {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
