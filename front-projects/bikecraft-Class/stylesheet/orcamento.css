@@ -1,0 +1,178 @@
+#orcamento {
+    background: linear-gradient(var(--c11) 300px, var(--c1) 0px);
+}
+
+.orcamento {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+
+    h2 {
+        font: var(--font-1-xs);
+        color: var(--c5);
+        text-transform: uppercase;
+        position: relative;
+    }
+    h2::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 8px;
+        background-color: var(--p1);
+        position: absolute;
+        left: -12px;
+        top: 5px;
+    }
+    .orcamento-produto,
+    .orcamento-dados {
+        padding: 60px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .orcamento-produto > * {
+        grid-column: 1/-1;
+    }
+    .orcamento-produto > label {
+        grid-column: initial;
+    }
+    .orcamento-produto label::before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border: 1px solid var(--c6);
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .orcamento-produto input:checked + label {
+        background-color: var(--c0);
+        color: var(--c10);
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    .orcamento-produto input:checked + label::before {
+        border-color: var(--c07);
+        box-shadow: inset 0 0 0 3px var(--c0), inset 0 0 0 6px var(--c7);
+    }
+    .orcamento-produto input {
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .orcamento-produto {
+        border-radius: 5px 0 0 5px;
+        background: var(--c12);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: start;
+        gap: 20px;
+
+        label {
+            background-color: var(--c10);
+            color: var(--c4);
+            padding: 12px 16px;
+            border-radius: 4px;
+            font: 400 1.5rem/1.5 "Poppins", sans-serif;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            border: 1px solid var(--c10);
+
+            span {
+                display: none;
+            }
+        }
+        label:hover {
+            background-color: var(--c9);
+        }
+        input:focus + label {
+            box-shadow: 0 0 0 2px var(--p1);
+            border: 1px solid var(--p12);
+        }
+
+        .orcamento-conteudo {
+            padding: 20px;
+            /* background-color: var(--c10); */
+            display: none;
+            label {
+                border: 1px solid var(--p12);
+            }
+            h2 {
+                font: var(--font-1-xs);
+                color: var(--c9);
+                margin-top: 20px;
+            }
+            .orcamento-detalhes {
+              background-color: var(--c0);
+              padding: 20px 12px;
+              /* display: grid; */
+              gap: 30px;
+              grid-template-columns: 1fr 1fr;
+              border-radius: 4px;
+              align-items: center;
+              margin-top: 8px;
+              display: none;
+
+              ul {
+                font: var(--font1-xs);
+                color: var(--c8);
+                li +li {
+                  margin-top: 8px;
+                }
+                
+                li {
+                  display: flex;
+                  align-items: center;
+                  img {
+                    width: 20px;
+                    margin-right: 8px;
+                  }
+                }
+              }
+            }
+        }
+    }
+
+    .orcamento-dados {
+        border-radius: 0 5px 5px 0;
+        background-color: var(--c0);
+
+        h2:nth-of-type(n + 2) {
+            margin-top: 20px;
+        }
+    }
+}
+
+#bikecraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro {
+    display: grid;
+    gap: 20px;
+}
+#nimbus:checked ~ .orcamento-detalhes,
+#magic:checked ~ .orcamento-detalhes,
+#nebula:checked ~ .orcamento-detalhes {
+    display: grid;
+}
+
+@media (max-width: 800px) {
+
+  .orcamento {
+    grid-template-columns: 1fr;
+  }
+  .orcamento-produto {
+    border-radius: 5px 5px 0 0;
+  }
+  .orcamento-dados {
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .orcamento-produto {
+  grid-template-columns: 1fr;
+  }
+}
